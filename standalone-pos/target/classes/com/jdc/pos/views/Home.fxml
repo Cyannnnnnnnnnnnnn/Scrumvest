@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.pos.views.Home">
+
+    <!-- Contenido principal scrollable -->
+    <center>
+        <ScrollPane fitToWidth="true" prefHeight="424.0" prefWidth="1127.0">
+            <content>
+                <VBox spacing="20" styleClass="main-content">
+                    <padding>
+                        <Insets bottom="20" left="20" right="20" top="20" />
+                    </padding>
+
+                    <!-- 👇 AÑADIMOS EL SALUDO PERSONALIZADO -->
+                    <HBox alignment="CENTER_LEFT">
+                        <Label fx:id="lblBienvenida" styleClass="header-title" text="Bienvenido, Usuario" />
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label fx:id="lblRol" styleClass="header-subtitle" text="Rol: Administrador" />
+                    </HBox>
+
+
+                    <!-- Sección: Proyectos activos -->
+                    <TitledPane expanded="true" prefHeight="35.0" prefWidth="1067.0" text="📦 Proyectos Activos">
+                        <content>
+                            <VBox fx:id="projectList" spacing="10" />
+                        </content>
+                    </TitledPane>
+
+                    <!-- Sección: Tareas asignadas -->
+                    <TitledPane expanded="true" text="📝 Tareas Asignadas">
+                        <content>
+                            <VBox fx:id="taskList" spacing="10" />
+                        </content>
+                    </TitledPane>
+
+                    <!-- Sección: Notificaciones -->
+                    <TitledPane expanded="false" text="🔔 Notificaciones Recientes">
+                        <content>
+                            <VBox fx:id="notificationList" spacing="10" />
+                        </content>
+                    </TitledPane>
+
+                    <!-- Sección: Accesos rápidos -->
+                    <TitledPane expanded="false" text="⚡ Accesos Rápidos">
+                        <content>
+                            <HBox fx:id="quickAccess" spacing="15" />
+                        </content>
+                    </TitledPane>
+
+                    <!-- Sección: Indicadores rápidos -->
+                    <TitledPane expanded="false" prefHeight="25.0" prefWidth="1067.0" text="📊 Indicadores Rápidos">
+                        <content>
+                            <HBox fx:id="widgets" spacing="15" />
+                        </content>
+                    </TitledPane>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

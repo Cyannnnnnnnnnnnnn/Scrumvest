@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://bmxxdxl51h0o4s1a1twx-mysql.services.clever-cloud.com:3306/bmxxdxl51h0o4s1a1twx?useSSL=true&requireSSL=true
+    username: u8n7rjjw1jfwoium
+    password: IUmhXhko90HhFD4NuJSB
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 3  # Ajusta según tu plan (Clever Cloud Free sugiere ≤5)
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+        format_sql: true
+        jdbc:
+          time_zone: UTC  # Recomendado para evitar problemas con zonas horarias

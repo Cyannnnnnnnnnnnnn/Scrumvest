@@ -12,7 +12,7 @@
          <children>
             <HBox styleClass="content-view-header" HBox.hgrow="ALWAYS">
                <children>
-                  <Label fx:id="title" styleClass="title" text="Categorias" />
+                  <Label fx:id="title" styleClass="title" text="Historias de Usuario" />
                </children>
             </HBox>
             <VBox onMouseClicked="#addNew" styleClass="add-button">

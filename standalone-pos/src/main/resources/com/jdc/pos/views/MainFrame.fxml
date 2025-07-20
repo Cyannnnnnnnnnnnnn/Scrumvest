@@ -36,7 +36,7 @@
             <VBox id="Category" layoutX="10.0" layoutY="150.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
                <children>
                   <SVGPath content="M10 3l-8 8 8 8 8-8-8-8zM5.5 10c0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5-1.5-0.672-1.5-1.5z" fill="#9C27B0" />
-                  <Label text="Categorias" />
+                  <Label text="Historias de Usuario" />
                </children>
             </VBox>
             <VBox id="Product" layoutX="10.0" layoutY="220.0" onMouseClicked="#clickMenu" styleClass="side-bar-menu">
